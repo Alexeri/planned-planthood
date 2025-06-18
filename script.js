@@ -116,27 +116,27 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function renderCards(cards) {
-  const parentSection = document.getElementById("blog-posts-section");
+  const parentSection = document.getElementById("cards");
   parentSection.innerHTML = "";
 
   const cardList = document.createElement("ul");
-  cardList.classList.add("cards");
+  cardList.classList.add("cards__list");
   cardList.setAttribute("role", "list");
 
   cards.forEach((card) => {
     const liElement = document.createElement("li");
 
     const articleElement = document.createElement("article");
-    articleElement.classList.add("card");
+    articleElement.classList.add("card", "bg-primary-light");
 
     articleElement.innerHTML = `
-      <figure class="card-image">
+      <figure class="card__image">
         <img src="${card.image}" alt="${card.title}" />
         <svg
         viewBox="0 0 71 93"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        class="card-watermark"
+        class="card__watermark"
         aria-hidden="true"
         >
             <path
@@ -163,18 +163,18 @@ function renderCards(cards) {
             />
         </svg>
       </figure>
-      <div class="card-badges">
+      <ul class="card__badges" role="list">
         ${card.badges
           .map(
-            (badge) => `<span class="badge ${badge.class}">${badge.name}</span>`
+            (badge) => `<li class="badge ${badge.class}">${badge.name}</li>`
           )
           .join("")}
-      </div>
-      <div class="card-text-container">
+      </ul>
+      <header class="card__header">
         <h3>${card.title}</h3>
         <p>${card.description}</p>
-      </div>
-      <div class="card-author">
+      </header>
+      <footer class="card__author">
         <img src="${card.author[0].image}" alt="${
       card.author[0].name
     }s profilbild" />
@@ -184,7 +184,7 @@ function renderCards(cards) {
       card.author[0].date
     }">${card.author[0].date}</time>
         </div>
-      </div>
+      </footer>
     `;
 
     liElement.appendChild(articleElement);
