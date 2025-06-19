@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const cardData = [
     {
-      image: "Assets/images/cards/cucumber.jpg",
+      image: "Assets/images/cards/cucumber.webp",
       badges: [
         { name: "Blommor", class: "badge--flower" },
         { name: "Ätbart", class: "badge--edible" },
@@ -13,13 +13,13 @@ document.addEventListener("DOMContentLoaded", () => {
       author: [
         {
           name: "Coolio",
-          image: "https://avatar.iran.liara.run/public/2",
+          image: "https://api.dicebear.com/9.x/miniavs/svg?seed=Wyatt&backgroundColor=b6e3f4",
           date: "2024-04-01",
         },
       ],
     },
     {
-      image: "Assets/images/cards/tomato.jpg",
+      image: "Assets/images/cards/tomato.webp",
       badges: [
         { name: "Solälskande", class: "badge--sunloving" },
         { name: "Lättodlat", class: "badge--easy" },
@@ -31,13 +31,13 @@ document.addEventListener("DOMContentLoaded", () => {
       author: [
         {
           name: "Anna Odlare",
-          image: "https://avatar.iran.liara.run/public/82",
+          image: "https://api.dicebear.com/9.x/miniavs/svg?seed=Andrea&backgroundColor=b6e3f4",
           date: "2024-12-05",
         },
       ],
     },
     {
-      image: "Assets/images/cards/Pelargonium.jpg",
+      image: "Assets/images/cards/pelargonium.webp",
       badges: [
         { name: "Dekorativ", class: "badge--decorative" },
         { name: "Färgstark", class: "badge--colorful" },
@@ -50,13 +50,13 @@ document.addEventListener("DOMContentLoaded", () => {
       author: [
         {
           name: "Blomsterkalle",
-          image: "https://avatar.iran.liara.run/public/20",
+          image: "https://api.dicebear.com/9.x/miniavs/svg?seed=Jameson&backgroundColor=b6e3f4",
           date: "2024-12-03",
         },
       ],
     },
     {
-      image: "Assets/images/cards/basil.jpg",
+      image: "Assets/images/cards/basil.webp",
       badges: [
         { name: "Kryddor", class: "" },
         { name: "Doftande", class: "badge--fragrant" },
@@ -68,13 +68,13 @@ document.addEventListener("DOMContentLoaded", () => {
       author: [
         {
           name: "Krydd-Malin",
-          image: "https://avatar.iran.liara.run/public/52",
+          image: "https://api.dicebear.com/9.x/miniavs/svg?seed=Vivian&backgroundColor=b6e3f4",
           date: "2024-12-07",
         },
       ],
     },
     {
-      image: "Assets/images/cards/salad.jpg",
+      image: "Assets/images/cards/salad.webp",
       badges: [
         { name: "Snabbväxande", class: "badge--fast" },
         { name: "Ätbart", class: "badge--edible" },
@@ -86,13 +86,13 @@ document.addEventListener("DOMContentLoaded", () => {
       author: [
         {
           name: "Grönis",
-          image: "https://avatar.iran.liara.run/public/11",
+          image: "https://api.dicebear.com/9.x/miniavs/svg?seed=Robert&backgroundColor=b6e3f4",
           date: "2024-12-06",
         },
       ],
     },
     {
-      image: "Assets/images/cards/fern.jpg",
+      image: "Assets/images/cards/fern.webp",
       badges: [
         { name: "Luftfuktande", class: "badge--air" },
         { name: "Grönska", class: "badge--green" },
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
       author: [
         {
           name: "Naturvännen",
-          image: "https://avatar.iran.liara.run/public/45",
+          image: "https://api.dicebear.com/9.x/miniavs/svg?seed=Kimberly&backgroundColor=b6e3f4",
           date: "2024-12-08",
         },
       ],
@@ -131,7 +131,7 @@ function renderCards(cards) {
 
     articleElement.innerHTML = `
       <figure class="card__image">
-        <img src="${card.image}" alt="${card.title}" />
+        <img src="${card.image}" alt="${card.title}" width="800" height="600" />
         <svg
         viewBox="0 0 71 93"
         fill="none"
